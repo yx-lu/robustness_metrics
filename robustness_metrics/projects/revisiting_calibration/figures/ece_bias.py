@@ -69,7 +69,7 @@ def plot(df_main: pd.DataFrame,
   if plot_confidence:
     row_order = ["none", "temperature_scaling", "tau"]
   else:
-    row_order = ["temperature_scaling"]
+    row_order = ["none"]
 
   g = plotting.FacetGrid(
       data=df_plot,
