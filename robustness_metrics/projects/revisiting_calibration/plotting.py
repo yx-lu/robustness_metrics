@@ -29,7 +29,7 @@ import seaborn as sns
 
 STD_GCE_PREFIX = (
     "gce(binning_scheme='adaptive',max_prob=True,class_conditional=False,"
-    "norm='l1',num_bins=100,threshold=0.0")
+    "norm='l2',num_bins=100,threshold=0.0")
 
 
 def set_seaborn_theme():
