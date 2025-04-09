@@ -64,7 +64,7 @@ def plot(df_main: pd.DataFrame,
         data[x], data[y], s=3, c=color, alpha=0.75, zorder=30, label="data",
         linewidth=0)
 
-  col_order = [15, 100, 5000]
+  col_order = [15, 100, 500, 1000, 5000]
   if plot_confidence:
     row_order = ["none", "temperature_scaling", "tau"]
   else:
