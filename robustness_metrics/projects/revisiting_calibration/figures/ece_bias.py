@@ -38,7 +38,7 @@ def plot(df_main: pd.DataFrame,
   mask &= (df_main.ModelName.str.startswith("jft-r50-x1") |
            df_main.ModelName.str.startswith("jft-r101-x3"))
   mask &= df_main.DatasetName == "imagenet(split='validation[20%:]')"
-  mask &= df_main.rescaling_method.isin(["none", "temperature_scaling"])
+  mask &= df_main.rescaling_method.isin(["none"])
   mask &= df_main.RawModelName.str.contains("size")
   mask &= df_main.RawModelName.str.contains("steps")
   df_plot = df_main[mask].copy()
