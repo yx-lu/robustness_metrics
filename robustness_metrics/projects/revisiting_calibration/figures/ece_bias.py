@@ -42,6 +42,7 @@ def plot(df_main: pd.DataFrame,
   mask &= df_main.RawModelName.str.contains("size")
   mask &= df_main.RawModelName.str.contains("steps")
   df_plot = df_main[mask].copy()
+  print(df_plot)
 
   df_plot["size"] = df_plot.RawModelName.map(
       lambda name: int(re.search(r"size=(\d+)", name).groups()[0]))  # pytype: disable=attribute-error
